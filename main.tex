@@ -1,0 +1,118 @@
+% Personal letter template using ashletter.cls.
+% This is written for my own reuse, so the comments below are practical reminders,
+% not package documentation.
+
+\documentclass[11pt]{ashletter}
+\usepackage[
+  letterpaper,
+  left=0.7in,
+  right=0.7in,
+  top=1.0in,
+  bottom=1.0in
+]{geometry}
+\usepackage{soul}
+\usepackage{xcolor}
+
+% Set the date explicitly.
+% Common options:
+% \date{\today}
+% \date{April 15, 2026}
+\date{\today}
+
+% Subject line shown above the salutation.
+\subject{REPLACE WITH SUBJECT LINE}
+
+% Examples of header customization.
+% Only change these if I actually want to override the default SBU/Kumar-lab header.
+%
+% \setheadertitle{College of Arts and Sciences}
+% \setheaderdepartment{Department of Physics and Astronomy}
+% \setheaderinstitution{Stony Brook University}
+% \setheaderaddress{Stony Brook, NY 11794}
+% \setheadername{Aishwarya Kumar}
+% \setheaderrole{Assistant Professor of Physics \& Astronomy}
+% \setheaderphone{8144418969}
+% \setheaderemail{aishwarya.kumar@stonybrook.edu}
+% \setheaderwebsite{https://sites.google.com/stonybrook.edu/kumarlab}
+% \setheaderlogofile{SBU stack_2clr_rgb_300ppi.png}
+%
+% Useful spacing/layout knobs if the template needs small visual adjustments.
+% Margins are set here in the document, not hidden in the class.
+% The header follows the document margins automatically.
+% By default, the divider position is derived from the rendered logo width plus
+% a small right-side pad, so I usually should not need to tune it.
+%
+% Header top offset usually needs to match the negative of the top margin if I want
+% the header flush to the top of the page.
+% \setheadertopoffset{-1.0in}
+% \setheaderleftwidth{3.9in}          % manual override if I explicitly want one
+% \setheaderlogorightpad{0.18in}      % tweak divider distance from the logo
+\setheaderrightxshift{0.2in}      % move only the right header block left/right
+% \setheaderrightyshift{0.2in}       % move only the right header block down/up
+% \setheadertextvshift{-0.48in}       % base internal vertical alignment of right header text
+% \setheaderbottomgap{0.8\baselineskip}
+% \setrecipientgap{0.8\baselineskip}
+% \setsubjectgap{0.8\baselineskip}
+% \setclosinggap{1.2\baselineskip}
+% \setsignaturevspace{0.1in}
+% \setheadertopoffset{-.8in}
+
+\begin{document}
+
+% Recipient block.
+% Use \\ between lines. Keep this block compact.
+\begin{letter}{%
+RECIPIENT NAME\\
+RECIPIENT TITLE / COMMITTEE / ORGANIZATION\\
+RECIPIENT INSTITUTION OR ADDRESS
+}
+
+% Opening should just be the salutation.
+\opening{Dear RECIPIENT,}
+
+% Body notes to self:
+% - Keep paragraphs short and readable.
+% - If this is a support/recommendation letter, open with the recommendation immediately.
+% - Avoid manual \vspace or \newpage unless absolutely necessary.
+% - Let the class handle layout first; only tweak class spacing if the template genuinely needs it.
+
+FIRST PARAGRAPH GOES HERE. Explain the purpose of the letter immediately.
+
+SECOND PARAGRAPH GOES HERE. Add the most important supporting details.
+
+THIRD PARAGRAPH GOES HERE. Keep going with concrete examples, evidence, or context.
+
+FINAL PARAGRAPH GOES HERE. End with a clear recommendation / request / conclusion.
+
+
+
+Sincerely,\\ \\
+
+% Signature block.
+% This is the stable manual API. Use SignatureRow + Signer.
+%
+% One signer:
+% \SignatureRow{l}
+% \Signer{AK_signature.png}{Aishwarya Kumar}
+% \EndSignatureRow
+%
+% Two signers:
+% \SignatureRow{ll}
+% \Signer{sig1.png}{Name One} &
+% \Signer{sig2.png}{Name Two}
+% \EndSignatureRow
+%
+% Three signers:
+% \SignatureRow{lll}
+% \Signer{sig1.png}{Name One} &
+% \Signer{sig2.png}{Name Two} &
+% \Signer{sig3.png}{Name Three}
+% \EndSignatureRow
+%
+% If I need more than three signers, just stack multiple SignatureRow blocks.
+\SignatureRow{l}
+\Signer{AK_signature.png}{Aishwarya Kumar}
+\EndSignatureRow
+
+\end{letter}
+\end{document}
