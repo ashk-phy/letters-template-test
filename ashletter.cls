@@ -38,7 +38,7 @@
 \newcommand{\HeaderRole}{Assistant Professor of Physics \& Astronomy}
 \newcommand{\HeaderPhone}{8144418969}
 \newcommand{\HeaderEmail}{aishwarya.kumar@stonybrook.edu}
-\newcommand{\HeaderWebsite}{https://sites.google.com/stonybrook.edu/kumarlab}
+\newcommand{\HeaderWebsite}{https://kumarlab.physics.stonybrook.edu}
 \newcommand{\HeaderLogoFile}{SBU stack_2clr_rgb_300ppi.png}
 \newcommand{\HeaderLogoHeight}{0.8in}
 \newcommand{\HeaderLogoVSpace}{0in}
